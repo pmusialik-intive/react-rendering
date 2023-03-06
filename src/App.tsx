@@ -5,6 +5,11 @@ import FancyText from './components/FancyText'
 import Paragraph from './components/Paragraph'
 import PersonData from './components/PersonData'
 
+const person = {
+  name: 'Paul',
+  age: 31,
+}
+
 function App() {
   console.log('Rendering App...')
 
@@ -13,11 +18,6 @@ function App() {
   const incrementNumber = useCallback(() => {
     setNumber((prev) => prev + 1)
   }, [])
-
-  const person = {
-    name: 'Paul',
-    age: 31,
-  }
 
   return (
     <div className="App">
