@@ -15,11 +15,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <FancyText text={'React Rendering'} />
-        <Paragraph text={`Current number is ${number}`} />
-        <Button onClick={incrementNumber} text="Increment" />
-      </header>
+      <FancyText text={'React Rendering'} />
+      <Paragraph text={`Current number is ${number}`} />
+      <Button onClick={incrementNumber} text="Increment" />
     </div>
   )
 }
