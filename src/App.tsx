@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import './App.css'
 import Button from './components/Button'
 import FancyText from './components/FancyText'
@@ -9,9 +9,9 @@ function App() {
 
   const [number, setNumber] = useState(0)
 
-  const incrementNumber = () => {
+  const incrementNumber = useCallback(() => {
     setNumber((prev) => prev + 1)
-  }
+  }, [])
 
   return (
     <div className="App">
