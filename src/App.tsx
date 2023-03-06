@@ -6,6 +6,7 @@ import Paragraph from './components/Paragraph'
 
 function App() {
   console.log('Rendering App...')
+
   const [number, setNumber] = useState(0)
 
   const incrementNumber = () => {
