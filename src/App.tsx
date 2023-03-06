@@ -1,17 +1,23 @@
+import { useState } from 'react'
 import './App.css'
-import Child from './components/family/Child'
-import Grandchild from './components/family/Grandchild'
-import Parent from './components/family/Parent'
+import Button from './components/Button'
+import FancyText from './components/FancyText'
+import Paragraph from './components/Paragraph'
 
 function App() {
+  console.log('Rendering App...')
+  const [number, setNumber] = useState(0)
+
+  const incrementNumber = () => {
+    setNumber((prev) => prev + 1)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <Parent>
-          <Child>
-            <Grandchild></Grandchild>
-          </Child>
-        </Parent>
+        <FancyText text={'React Rendering'} />
+        <Paragraph text={`Current number is ${number}`} />
+        <Button onClick={incrementNumber} text="Increment" />
       </header>
     </div>
   )
