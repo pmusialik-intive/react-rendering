@@ -1,18 +1,10 @@
 import './App.css'
-import Child from './components/family/Child'
-import Grandchild from './components/family/Grandchild'
-import Parent from './components/family/Parent'
+import ParentWithWholeFamily from './components/family/ParentWithWholeFamily'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Parent>
-          <Child>
-            <Grandchild></Grandchild>
-          </Child>
-        </Parent>
-      </header>
+      <ParentWithWholeFamily />
     </div>
   )
 }
