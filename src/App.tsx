@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import './App.css'
 import Button from './components/Button'
 import FancyText from './components/FancyText'
@@ -14,10 +14,12 @@ function App() {
     setNumber((prev) => prev + 1)
   }, [])
 
-  const person = {
-    name: 'Paul',
-    age: 31,
-  }
+  const person = useMemo(() => {
+    return {
+      name: 'Paul',
+      age: 31,
+    }
+  }, [])
 
   return (
     <div className="App">
