@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Person } from '../data/Person'
 
 interface Props {
@@ -16,4 +17,4 @@ const PersonData = (props: Props) => {
   )
 }
 
-export default PersonData
+export default memo(PersonData)
