@@ -6,13 +6,11 @@ import Parent from './components/family/Parent'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Parent>
-          <Child>
-            <Grandchild></Grandchild>
-          </Child>
-        </Parent>
-      </header>
+      <Parent>
+        <Child>
+          <Grandchild></Grandchild>
+        </Child>
+      </Parent>
     </div>
   )
 }
