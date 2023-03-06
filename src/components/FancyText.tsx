@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import './FancyText.css'
 
 type Props = {
@@ -10,4 +11,4 @@ const FancyText = (props: Props) => {
   return <span className="fancy-text">{props.text}</span>
 }
 
-export default FancyText
+export default memo(FancyText)
